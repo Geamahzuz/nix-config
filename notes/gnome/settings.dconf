@@ -14,7 +14,7 @@ report-technical-problems=true
 [org/gnome/desktop/screensaver]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///home/gvolpe/.local/share/backgrounds/2020-02-26-23-29-04-haskell-2.jpg'
+picture-uri='file:///home/geamah/.local/share/backgrounds/2020-02-26-23-29-04-haskell-2.jpg'
 primary-color='#000000000000'
 secondary-color='#000000000000'
 
@@ -117,7 +117,7 @@ custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybin
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
 binding='<Super>e'
-command='/home/gvolpe/toggle-touchpad.sh'
+command='/home/geamah/toggle-touchpad.sh'
 name='Toggle Touchpad'
 
 [org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1]

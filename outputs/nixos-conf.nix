@@ -18,4 +18,13 @@
       ../system/configuration.nix
     ];
   };
+
+  hp-pavillion = lib.nixosSystem {
+    inherit system;
+    specialArgs = { inherit inputs; };
+    modules = [
+      ../system/machine/hp-pavillion
+      ../system/configuration.nix
+    ];
+  };
 }

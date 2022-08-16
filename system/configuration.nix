@@ -44,7 +44,7 @@ in
   i18n.defaultLocale = "en_US.UTF-8";
 
   # Set your time zone.
-  time.timeZone = "Europe/Warsaw";
+  time.timeZone = "America/New_York";
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -86,7 +86,7 @@ in
     };
   };
 
-  users.extraGroups.vboxusers.members = [ "gvolpe" ];
+  users.extraGroups.vboxusers.members = [ "geamah" ];
 
   # Enable sound.
   sound = {
@@ -140,7 +140,7 @@ in
   programs.fish.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.gvolpe = {
+  users.users.geamah = {
     isNormalUser = true;
     extraGroups  = [ "docker" "networkmanager" "wheel" "scanner" "lp" ]; # wheel for ‘sudo’.
     shell        = pkgs.fish;
@@ -166,11 +166,11 @@ in
   # Nix daemon config
   nix = {
     # Automate garbage collection
-    gc = {
-      automatic = true;
-      dates     = "weekly";
-      options   = "--delete-older-than 7d";
-    };
+    #gc = {
+    #  automatic = true;
+    #  dates     = "weekly";
+    #  options   = "--delete-older-than 7d";
+    #};
 
     # Flakes settings
     package = pkgs.nixFlakes;
@@ -179,8 +179,6 @@ in
     # Avoid unwanted garbage collection when using nix-direnv
     extraOptions = ''
       experimental-features = nix-command flakes
-      keep-outputs          = true
-      keep-derivations      = true
     '';
 
     settings = {
@@ -188,7 +186,7 @@ in
       auto-optimise-store = true;
 
       # Required by Cachix to be used as non-root user
-      trusted-users = [ "root" "gvolpe" ];
+      trusted-users = [ "root" "geamah" ];
     };
   };
 
