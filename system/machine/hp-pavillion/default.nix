@@ -15,6 +15,7 @@
       };
       grub = {
         enable  = true;
+        devices = ["nodev"];
         efiSupport = true;
         version = 2;
       };
