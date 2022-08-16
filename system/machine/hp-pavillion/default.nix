@@ -11,7 +11,7 @@
     loader = {
       efi = {
         canTouchEfiVariables = true;
-        efiSysMoutPoint = "/boot";
+        efiSysMountPoint = "/boot";
       };
       grub = {
         enable  = true;
